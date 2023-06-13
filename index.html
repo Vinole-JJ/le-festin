@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Le'Festin</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/factura.js"></script>
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/tar.css">
+    <link rel="icon" type="image/gif" href="img/icono.png" sizes="36x36">
+</head>
+
+<body>
+
+    
+
+    <div class="navbar">
+        <img class= logo src="img/logolargo.png">
+              <ul class="button" id=”button”>
+            <li><a href="index.html">Lobby</a></li>
+            <li><a href="registro.php">Registro</a></li>
+            <li><a href="clientes.php">Gestionar Cliente</a></li>
+        </ul>
+    </div>
+
+    <div class="frase">
+        <ul class="frase_texto"></ul>
+            <div class="frase_texto">La buena comida es como la música, sólo hay que quedarse atento y apreciar los sabores.</div>
+        </ul>
+    </div>
+
+<div>
+  <div class="form-register2">
+          <ul class="button2" id=”button2”>
+            <img class= logogrande src="img/logolargo.png">
+        <li></li>
+           <li> <input type="submit" class="boton" value="Hacer un Pedido" id="pedido"name="pedido" onclick="mo()"></li>
+    </ul>
+</div>
+
+</div>
+
+<form class="form-register" id="target" action="resources/nuevo.php" method="POST">
+
+    <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre del Cliente">
+    <input class="controls" type="text" name="apellido" id="apellido" placeholder="Apellido del Cliente">
+    <input class="controls" type="number" name="cedula" id="cedula" placeholder="Numero de Cedula del Cliente">
+    <input type="text" name="mesa" id="mesa" class="controls" placeholder="Mesa del Cliente">
+
+    <p>Servicios:</p>
+    <select class="controls" name='servicio' id="servicio">
+        <option class="op" value="!">Indique Tipo de Servicio</option>
+        <option class="op" value="restaurante">Comer en el restaurante</option>
+        <option class="op" value="llevar">Para llevar</option>
+    </select>
+
+    <p>Platillo:</p>
+    <select class="controls" name="plato" id="plato">
+        <option class="op" value=",">Seleccione un Platillo</option>
+        <option class="op" value="sandwich">Sandwich (Desayuno)</option>
+        <option class="op" value="arepa">Arepa (Desayuno)</option>
+        <option class="op" value="arroz">Arroz con Pollo (Almuerzo)</option>
+        <option class="op" value="pasta">Pasta (Almuerzo)</option>
+        <option class="op" value="rata">Ratatouille (Cena)</option>
+        <option class="op" value="pizza">Pizza (Cena)</option>
+    </select>
+
+    <input class="controls" type="number" name="cantidad" id="cantidad" placeholder="Indique Cantidad">
+    <input type="submit" class="boton" value="Registrar" name="registrar" onclick="registro()">
+
+</form>
+
+<div class="contenedor" id="menu">
+    <div class="contenedor-cards">            
+      <div class="contenedor-card-item">
+            <div class="contenedor-card-item-wrapper">
+              <img src="img/sandwich.jpg" alt="">
+              <div class="contenedor-info">
+                    <div class="info">
+                      <p class="titulo">Sandwich</p>
+                      <span class="categoria">Desayuno - 3$</span>
+                    </div>
+                    <div class="fondo"></div>
+              </div>
+            </div>
+      </div>
+      <div class="contenedor-card-item">
+            <div class="contenedor-card-item-wrapper">
+              <img src="img/arepa.jpg" alt="">
+              <div class="contenedor-info">
+                    <div class="info">
+                      <p class="titulo">Arepa</p>
+                      <span class="categoria">Desayuno - 3$</span>
+                    </div>
+                    <div class="fondo"></div>
+              </div>
+            </div>
+      </div>
+      <div class="contenedor-card-item">
+            <div class="contenedor-card-item-wrapper">
+              <img src="img/arroz.jpg" alt="">
+              <div class="contenedor-info">
+                    <div class="info">
+                      <p class="titulo">Arroz con Pollo</p>
+                      <span class="categoria">Almuerzo - 5$</span>
+                    </div>
+                    <div class="fondo"></div>
+              </div>
+            </div>
+      </div>
+      <div class="contenedor-card-item">
+            <div class="contenedor-card-item-wrapper">
+              <img src="img/pasta.jpg" alt="">
+              <div class="contenedor-info">
+                    <div class="info">
+                      <p class="titulo">Pasta</p>
+                      <span class="categoria">Almuerzo - 5$</span>
+                    </div>
+                    <div class="fondo"></div>
+              </div>
+            </div>
+      </div>
+      <div class="contenedor-card-item">
+            <div class="contenedor-card-item-wrapper">
+              <img src="img/pizza.jpg" alt="">
+              <div class="contenedor-info">
+                    <div class="info">
+                      <p class="titulo">Pizza</p>
+                      <span class="categoria">Cena - 10$</span>
+                    </div>
+                    <div class="fondo"></div>
+              </div>
+            </div>
+      </div>
+      <div class="contenedor-card-item">
+            <div class="contenedor-card-item-wrapper">
+              <img src="img/ratatouille.jpg" alt="">
+              <div class="contenedor-info">
+                    <div class="info">
+                      <p class="titulo">Ratatouille</p>
+                      <span class="categoria">Cena - 10$</span>
+                    </div>
+                    <div class="fondo"></div>
+              </div>
+            </div>
+      </div>
+     </div>
+</div>
+
+<br><br>
+
+
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/transicion.js"></script>
+</body>
+
+</html>
